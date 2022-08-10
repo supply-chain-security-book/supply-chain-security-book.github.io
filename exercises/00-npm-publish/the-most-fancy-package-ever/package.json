@@ -1,0 +1,8 @@
+{
+    "name": "the-most-fancy-package-ever",
+    "version": "1.0.2",
+    "description": "",
+    "main": "index.js",
+    "keywords": [],
+    "license": "MIT"
+}
