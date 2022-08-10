@@ -18,7 +18,7 @@ python get_cert.py test.crt
 
 To see the content of the cert, use `openssl` as follows:
 
-```
+```sh
 # Check the issued certificate
 openssl x509 -in test.crt -text
 ```
@@ -98,8 +98,7 @@ Has anyone signed `artifacts/sample.txt` and saved the signature at Rekor ever? 
 ### Challenge 2 -- Find what one has signed so far
 
 `takashi.yoneuchi@shift-js.info` at GitHub was hacked via password breaches. Someone might have signed resources with containers.
-
-- (A) Find the Rekor records related to `takashi.yoneuchi@shift-js.info` to find out invalid signatures!
+Find the Rekor records related to `takashi.yoneuchi@shift-js.info` to find out invalid signatures!
 
 > **info**
 > You'll do this kind of inspection when an OIDC identity or OIDC provider is compromised or when public Fulcio instance is compromised.
