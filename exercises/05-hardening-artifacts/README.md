@@ -23,6 +23,20 @@ go install github.com/sigstore/cosign/cmd/cosign@v1.10.1
 To sign the image with an ephemeral key + Fulcio, you can use `cosign sign` command as follows:
 
 ```sh
+# Generate an image to sign
+
+# in fish
+set IMAGE_NAME ttl.sh/(uuidgen | tr [:upper:] [:lower:]):4h
+docker run -v "$PWD":/work distroless.dev/apko build src/alpine-base.yaml $IMAGE_NAME apko-alpine.tar
+crane push apko-alpine.tar $IMAGE_NAME
+
+# in bash
+IMAGE_NAME=ttl.sh/$(uuidgen | tr [:upper:] [:lower:]):4h
+docker run -v "$PWD":/work distroless.dev/apko build src/alpine-base.yaml $IMAGE_NAME apko-alpine.tar
+docker load < apko-alpine.tar
+
+# Sign the image with an ephemeral key
+
 # in bash
 IMAGE_NAME_HASHED=$(docker inspect $IMAGE_NAME | jq -r ".[0].RepoDigests[0]")
 COSIGN_EXPERIMENTAL=1 cosign sign $IMAGE_NAME_HASHED
