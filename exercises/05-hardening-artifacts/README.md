@@ -115,6 +115,7 @@ crane push apko-alpine.tar $IMAGE_NAME
 # in bash
 IMAGE_NAME=ttl.sh/$(uuidgen | tr [:upper:] [:lower:]):4h
 docker run -v "$PWD":/work distroless.dev/apko build src/alpine-base.yaml $IMAGE_NAME apko-alpine.tar
+crane push apko-alpine.tar $IMAGE_NAME
 ```
 
 Then you'll see `sbom-*.spdx.json` in the current directory. You can attest it to the container image by the following commands:
