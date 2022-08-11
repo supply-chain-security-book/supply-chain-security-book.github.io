@@ -13,7 +13,7 @@ pip install -r requirements.txt
 Once you have installed all requirements successfully, you can get a cert for an ephemeral key from Fulcio as follows:
 
 ```sh
-python get_cert.py test.crt
+python get_cert.py test
 ```
 
 To see the content of the cert, use `openssl` as follows:
