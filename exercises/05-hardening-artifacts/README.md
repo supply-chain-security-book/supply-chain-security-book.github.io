@@ -41,8 +41,6 @@ crane push apko-alpine.tar $IMAGE_NAME
 
 IMAGE_NAME_HASHED=$IMAGE_NAME@$(crane digest $IMAGE_NAME)
 COSIGN_EXPERIMENTAL=1 cosign sign $IMAGE_NAME
-
-# in fish
 ```
 
 To verify the signature, run the following:
@@ -107,6 +105,8 @@ Once Attestations
 First, build a container image with `apko`:
 
 ```sh
+# Generate an image to sign + Sign the image with an ephemeral key
+
 # in fish
 set IMAGE_NAME ttl.sh/(uuidgen | tr [:upper:] [:lower:]):4h
 docker run -v "$PWD":/work distroless.dev/apko build src/alpine-base.yaml $IMAGE_NAME apko-alpine.tar
@@ -115,7 +115,6 @@ crane push apko-alpine.tar $IMAGE_NAME
 # in bash
 IMAGE_NAME=ttl.sh/$(uuidgen | tr [:upper:] [:lower:]):4h
 docker run -v "$PWD":/work distroless.dev/apko build src/alpine-base.yaml $IMAGE_NAME apko-alpine.tar
-docker load < apko-alpine.tar
 ```
 
 Then you'll see `sbom-*.spdx.json` in the current directory. You can attest it to the container image by the following commands:
