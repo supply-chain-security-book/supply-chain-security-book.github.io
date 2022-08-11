@@ -146,6 +146,39 @@ What's happening behind attestation process by Cosign? What does the command `co
 
 A tool [witness](https://github.com/testifysec/witness) allows you to generate more attestations on build.
 
+### Exercise: Work with Trivy
+
+
+```sh
+# 適当に含まれている脆弱性検査をしたいイメージを用意する
+
+# in bash or zsh
+docker pull alpine:3.10
+set IMAGE_NAME ttl.sh/$(uuidgen | tr "[:upper:]" "[:lower:]"):8h
+docker tag alpine:3.10 $IMAGE_NAME
+docker push $IMAGE_NAME
+
+# in fish
+docker pull alpine:3.10
+set IMAGE_NAME ttl.sh/(uuidgen | tr [:upper:] [:lower:]):8h
+docker tag alpine:3.10 $IMAGE_NAME
+docker push $IMAGE_NAME
+```
+
+```sh
+# Canary 版 Trivy を拾ってくる（最新のリリースに機能が含まれていないため……）
+# https://github.com/aquasecurity/trivy/actions/runs/2832002363
+
+# Trivy で脆弱性情報をスキャンする
+trivy image --format cosign-vuln --output vuln.json $IMAGE_NAME
+
+# スキャンして出てきた結果をイメージに attest する
+COSIGN_EXPERIMENTAL=1 cosign attest --type vuln --predicate vuln.json $IMAGE_NAME
+
+# attestation を verify する
+COSIGN_EXPERIMENTAL=1 cosign verify-attestation $IMAGE_NAME --type vuln
+```
+
 ## Continuous Review of SBoM
 
 > **Info**
