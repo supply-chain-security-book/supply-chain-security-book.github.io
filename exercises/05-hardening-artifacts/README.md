@@ -127,7 +127,7 @@ COSIGN_EXPERIMENTAL=1 cosign attest $IMAGE_NAME --predicate sbom-*.spdx.json --t
 To see the attestation(s), run the following:
 
 ```sh
-cosign download attestation $IMAGE_NAME
+cosign download attestation $IMAGE_NAME --type spdxjson
 ```
 
 To verify the attestation(s), run the following:
