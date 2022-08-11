@@ -1,0 +1,12 @@
+run:
+  key: testkey.pem
+  step: demo
+  outfile: demo-attestation.json
+  trace: false
+  attestations:
+    - git
+    - environment
+verify:
+  attestations:
+    - "demo-attestation.json"
+  publickey: testpub.pem
