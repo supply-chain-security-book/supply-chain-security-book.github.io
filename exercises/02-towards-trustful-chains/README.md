@@ -69,5 +69,3 @@ You'll review each of aforementioned three challenges as follows:
     - [../04-hardening-builds](../04-hardening-builds)
     - [../04-hardening-artifacts](../05-hardening-artifacts)
     - [../06-hardening-delivery](../06-hardening-delivery)
-
-After reviewing them, you'll do some exercises on

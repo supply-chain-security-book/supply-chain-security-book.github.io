@@ -1,4 +1,6 @@
 # Put It Together
 
-> **Info**
-> Coming soon!
+Write a GitHub Action workflow to do the following:
+
+1. Build a Go app with SBoM without
+2.
