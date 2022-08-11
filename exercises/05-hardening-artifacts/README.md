@@ -33,7 +33,7 @@ crane push apko-alpine.tar $IMAGE_NAME
 # in bash
 IMAGE_NAME=ttl.sh/$(uuidgen | tr [:upper:] [:lower:]):4h
 docker run -v "$PWD":/work distroless.dev/apko build src/alpine-base.yaml $IMAGE_NAME apko-alpine.tar
-docker load < apko-alpine.tar
+crane push apko-alpine.tar $IMAGE_NAME
 
 # Sign the image with an ephemeral key
 
