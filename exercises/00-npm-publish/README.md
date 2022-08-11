@@ -1,6 +1,6 @@
-# Try `npm publish`
+# 00. Know the current state `npm`
 
-## Createa Your Own Package
+## Create Your Own Package
 
 Edit `name` of `./the-most-fancy-package-ever/package.json`, then edit `./the-most-fancy-package-ever/index.js` as you like.
 

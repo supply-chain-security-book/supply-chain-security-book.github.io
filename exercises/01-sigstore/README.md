@@ -1,4 +1,4 @@
-# Fulcio + Rekor the Hardway
+# 01. Getting Started with Sigstore
 
 In this section, you'll interact with Fulcio and Rekor by a small Python script. This kind of interaction is tricky a little bit --- in general, you won't talk with them directly and use wrappers like Cosign or any other attestators.
 
