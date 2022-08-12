@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunksupply_chain_security_book=self.webpackChunksupply_chain_security_book||[]).push([[883],{30429:function(t,u,n){n.r(u),n.d(u,{default:function(){return i}});n(67294);var e=n(70142),o=n(67940),c=n(23431);function i(){return(0,c.tZ)(e.Z,{title:"ページが存在しません"},(0,c.tZ)(o.Z,{title:"404: Not found"}),(0,c.tZ)("p",null,"Not found."))}}}]);
+//# sourceMappingURL=component---src-pages-404-js-76b049e93cf0a7ccc6bb.js.map

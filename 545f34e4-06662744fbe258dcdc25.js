@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunksupply_chain_security_book=self.webpackChunksupply_chain_security_book||[]).push([[980],{60782:function(t,u,n){n.d(u,{vHB:function(){return a}});var c=n(51046);function a(t){return(0,c.w_)({tag:"svg",attr:{viewBox:"0 0 512 512"},child:[{tag:"path",attr:{d:"M32 96v64h448V96H32zm0 128v64h448v-64H32zm0 128v64h448v-64H32z"}}]})(t)}}}]);
+//# sourceMappingURL=545f34e4-06662744fbe258dcdc25.js.map
