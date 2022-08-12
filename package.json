@@ -1,0 +1,48 @@
+{
+  "name": "supply-chain-security-book",
+  "private": true,
+  "version": "1.0.0",
+  "description": "",
+  "author": "",
+  "license": "MIT",
+  "starter-name": "gatsby-starter-rocket-docs",
+  "dependencies": {
+    "@rocketseat/gatsby-theme-docs": "^3.1.0",
+    "gatsby": "^4.2.0",
+    "gatsby-plugin-canonical-urls": "^4.2.0",
+    "gatsby-plugin-google-analytics": "^4.2.0",
+    "gatsby-plugin-google-gtag": "^3.9.0",
+    "gatsby-plugin-manifest": "^4.2.0",
+    "gatsby-plugin-offline": "^5.2.0",
+    "gatsby-plugin-remove-trailing-slashes": "^4.2.0",
+    "gatsby-plugin-sitemap": "^5.2.0",
+    "gatsby-remark-emoji": "^0.0.3",
+    "gatsby-remark-numbered-footnotes": "^1.0.1",
+    "prismjs": "^1.24.1",
+    "prop-types": "^15.7.2",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "remark-emoji": "^2.2.0",
+    "styled": "^1.0.0"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^4.28.2",
+    "@typescript-eslint/parser": "^4.28.2",
+    "eslint": "^7.30.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-mdx": "^2.0.2",
+    "eslint-plugin-prettier": "^3.4.0",
+    "gatsby-plugin-typegen": "^2.2.4",
+    "prettier": "^2.7.1",
+    "typescript": "^4.3.5"
+  },
+  "keywords": [],
+  "scripts": {
+    "build": "gatsby build",
+    "start": "gatsby develop",
+    "serve": "gatsby serve",
+    "lint": "eslint . --ext .tsx --ext .ts",
+    "lint:fix": "eslint . --fix --ext .tsx --ext .ts",
+    "clean": "gatsby clean"
+  }
+}

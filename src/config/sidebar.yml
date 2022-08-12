@@ -1,0 +1,44 @@
+# Sidebar navigation
+
+- label: "Top"
+  link: "/"
+- label: "About This Book"
+  link: "/about-this-book"
+- label: "Part 1: Software Supply Chain Security 101"
+  items:
+    - label: "Overview"
+      link: "/chapters/software-supply-chain"
+- label: "Part 2: Sigstore"
+  items:
+    - label: "Overview"
+      link: "/chapters/sigstore"
+    - label: "Fulcio"
+      link: "/chapters/sigstore/fulcio"
+    - label: "Rekor"
+      link: "/chapters/sigstore/rekor"
+- label: "Part 3: Towards Software Supply Chain"
+  items:
+    - label: "Overview"
+      link: "/chapters/towards-trustful-chains"
+    - label: "Hardening SCM"
+      link: "/chapters/hardening-scm"
+    - label: "Hardening Builds"
+      link: "/chapters/hardening-builds"
+    - label: "Hardening Artifacts"
+      link: "/chapters/hardening-artifacts"
+    - label: "Hardening Delivery"
+      link: "/chapters/hardening-delivery"
+    - label: "Put Them Together"
+      link: "/chapters/put-them-together"
+    - label: "Audit"
+      link: "/chapters/audit"
+- label: "セキュリティ・キャンプ全国大会2022オンライン 演習資料"
+  items:
+    - label: "Use npm"
+      link: "/events/seccamp2022/npm"
+- label: Others
+  items:
+    - label: "Author (@lmt_swallow)"
+      link: https://twitter.com/lmt_swallow
+    - label: "Shisho Cloud"
+      link: https://shisho.dev

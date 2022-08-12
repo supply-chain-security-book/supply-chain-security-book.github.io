@@ -1,0 +1,30 @@
+---
+title: Fulcio
+metaTitle: "TODO"
+metaDescription: "TODO"
+---
+
+# Fulcio
+
+In this section, you'll interact with Fulcio and Rekor by a small Python script. This kind of interaction is tricky a little bit --- in general, you won't talk with them directly and use wrappers like Cosign or any other attestators.
+
+## Play with Fulcio
+
+Where you should start is installation of requirements:
+
+```sh
+pip install -r requirements.txt
+```
+
+Once you have installed all requirements successfully, you can get a cert for an ephemeral key from Fulcio as follows:
+
+```sh
+python get_cert.py test
+```
+
+To see the content of the cert, use `openssl` as follows:
+
+```sh
+# Check the issued certificate
+openssl x509 -in test.crt -text
+```
